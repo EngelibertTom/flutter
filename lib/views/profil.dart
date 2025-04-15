@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projet/custom-search-bar.dart';
+import 'package:projet/grid-photo-view.dart';
 
 class ProfilPage extends StatefulWidget {
   const ProfilPage({super.key});
@@ -25,15 +27,8 @@ class _ProfilState extends State<ProfilPage> {
       ),
       body: Column(
         children: [
-          const SizedBox(height: 20),
-          Text(
-            'Test',
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
-          ),
+          Padding(child: CustomSearchBar(), padding: EdgeInsets.all(16),),
+          Expanded(child: GridPhotoView())
         ],
       ),
     );
